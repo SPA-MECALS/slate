@@ -1,24 +1,20 @@
 # Logout
 
-## Login to an account
-
-```shell
-curl -H "X-Key: YOUR XKEY" "https://backoffice.mailperformance.com/actions/"
-```
+## Logout of a workstation
 
 <blockquote class="lang-specific json">
-  <p>The request returns a JSON structured like this (this is a pure exemple that is not working): </p>
+  <p>The request doesn't returns a JSON</p>
 </blockquote>
 
 ```json
 
 ```
 
-This endpoint retrieves all actions.
+This endpoint allows you to logout of a workstation.
 
 ### HTTP Request
 
-`POST http://193.10.30.169/login`
+`POST http://193.10.30.169/logout`
 
 ### Query Parameters
 
@@ -26,13 +22,12 @@ The parameters to pass must be in the form of a JSON body.
 
 Property | Type | Required | Description
 -------- | ---- | -------- | -----------
-email | string | true | Email of the user you want to login with
-password | string | true | Password of the user you want to login with
-
+user_id | string | true | Id of the user you want to logout
+workstation_id | string | true | Id of the workstation where the user is login
 
 ### Return Codes
 
 Code | Description
 ---- | -----------
 200 | Success -- OK
-401 | Unauthorized -- Your credentials are wrong
+401 | Unauthorized
