@@ -23,7 +23,8 @@ The parameters to pass must be in the form of a JSON body.
 Property | Type | Required | Description
 -------- | ---- | -------- | -----------
 user_id | string | true | Id of the user you want to logout
-workstation_id | string | true | Id of the workstation where the user is login
+workstation_id | string | true | Id of the workstation where the user is logged in
+facility_pub_id | string | true | Id of the facility where the user is logged in
 
 ### Return Codes
 
