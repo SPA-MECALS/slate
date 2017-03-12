@@ -11,7 +11,7 @@ includes:
   - introduction
   - login
   - logout
-  - changeEvent
+  - changeStatus
 
 search: true
 ---
