@@ -340,19 +340,18 @@
 
           <h1 id="logout">Logout</h1>
 
-<h2 id="login-to-an-account">Login to an account</h2>
-<pre class="highlight shell tab-shell"><code>curl -H <span class="s2">"X-Key: YOUR XKEY"</span> <span class="s2">"https://backoffice.mailperformance.com/actions/"</span>
-</code></pre>
+<h2 id="logout-of-a-workstation">Logout of a workstation</h2>
+
 <blockquote class="lang-specific json">
-  <p>The request returns a JSON structured like this (this is a pure exemple that is not working): </p>
+  <p>The request doesn&rsquo;t returns a JSON</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves all actions.</p>
+<p>This endpoint allows you to logout of a workstation.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST http://193.10.30.169/login</code></p>
+<p><code class="prettyprint">POST http://193.10.30.169/logout</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
@@ -367,16 +366,16 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>email</td>
+<td>user_id</td>
 <td>string</td>
 <td>true</td>
-<td>Email of the user you want to login with</td>
+<td>Id of the user you want to logout</td>
 </tr>
 <tr>
-<td>password</td>
+<td>workstation_id</td>
 <td>string</td>
 <td>true</td>
-<td>Password of the user you want to login with</td>
+<td>Id of the workstation where the user is login</td>
 </tr>
 </tbody></table>
 
@@ -394,7 +393,7 @@
 </tr>
 <tr>
 <td>401</td>
-<td>Unauthorized &ndash; Your credentials are wrong</td>
+<td>Unauthorized</td>
 </tr>
 </tbody></table>
 
